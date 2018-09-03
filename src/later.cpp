@@ -66,7 +66,7 @@ bool at_top_level() {
   if (nframe == -1) {
     throw Rcpp::exception("Error occurred while calling sys.nframe()");
   }
-  return true;
+  return nframe <= 6;
 }
 
 // The queue of user-provided callbacks that are scheduled to be
